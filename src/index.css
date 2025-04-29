@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme{
+  --color-hero: ##1e213a;
+  --color-hero-text: rgb(231 231 235 / 0.8);
+  --text-opacity: 0.8;
+  --color-btnSelected: #e7e7eb;
+  --color-btnUnselected: #585676;
+  --color-btnText-selected: #110e3c;
+  --color-btnText-unselected: #e7e7eb;
+}
+
+body{
+  font-family: "Raleway", sans-serif;
+  color: var(--color-hero-text);
+ 
+}
