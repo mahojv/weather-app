@@ -30,7 +30,7 @@ export default function HeroSection({ response, loading, units, setSearch, searc
           <div className=' flex items-center justify-around h-[64px] w-full  mt-6'>
 
             <button onClick={() => setToggle(true)} className='bg-[#6e707a] h-[40px] w-[176px] text-[16px] rounded-lg cursor-pointer '>Search for places</button>
-            <button onClick={geoFindAPI} className='rounded-full bg-[#4b4d61] w-[40px] h-[40px] flex justify-center cursor-pointer '><img className='w-[25px] ' src="location.svg" alt="" /></button>
+            <button onClick={geoFindAPI} className='rounded-full bg-[#4b4d61] w-[40px] h-[40px] flex justify-center items-center cursor-pointer '><img className='w-[25px] ' src="location.svg" alt="" /></button>
           </div>
           <div className=' relative  w-full  h-[216px]  flex justify-center items-center'>
             <figure>
