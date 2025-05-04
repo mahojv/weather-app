@@ -3,7 +3,7 @@ import { obtainDate } from '../js/obtainDate'
 
 export default function CardWeather({index,dt,temp,temp_max,temp_min,icon,units}) {
 
-// console.log(dt*1000)
+
   const date = obtainDate(dt*1000)
   return (
     <>

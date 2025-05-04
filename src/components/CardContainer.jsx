@@ -6,7 +6,7 @@ import { obtainDate } from '../js/obtainDate'
 export default function CardContainer({search, units}) {
   const url2 = '/history_bulk.json'
 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=f3a2b561d6ca422f57915176a42486d4&units=${units}`
+  const url = `https://api.openweathermap.org/data/2.5/forecast?${search}&appid=f3a2b561d6ca422f57915176a42486d4&units=${units}`
 
   const { loading, error, response } = useData(url)
   const today = Date.now()
@@ -25,7 +25,7 @@ export default function CardContainer({search, units}) {
       const dateAnalized = obtainDate(weatherDate.dt * 1000)
 
       if (dateAnalized === fecha) {
-        console.log("no aplica jaja")
+        // console.log("no aplica jaja")
         return acum
       }
 

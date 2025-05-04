@@ -1,12 +1,26 @@
-# React + Vite
+## 🌐 Nota Importante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto utiliza la API de [ipinfo.io](https://ipinfo.io/) para obtener la dirección IP del visitante. 🖥️📍 Gracias a esta herramienta, podemos proporcionar una experiencia más personalizada. 🎉
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades del Proyecto
 
-## Expanding the ESLint configuration
+- 🌍 Obtención de la ubicación del usuario mediante su dirección IP.
+- ☀️ Visualización del clima actual basado en la ubicación del usuario.
+- 🔄 Actualización automática de datos meteorológicos en tiempo real.
+- 🌡️ Muestra de temperatura, humedad, y condiciones climáticas.
+- 📅 Pronóstico del clima para los próximos días.
+- 🌙 Modo oscuro y claro para una mejor experiencia de usuario.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend**: React.js, CSS3, HTML5.
+- **API**: [ipinfo.io](https://ipinfo.io/) para la ubicación y [OpenWeatherMap](https://openweathermap.org/) para los datos meteorológicos.
+- **Gestión de Estado**: Redux.
+- **Estilo**: Tailwind CSS.
+- **Herramientas de Desarrollo**: Webpack, Babel.
+- **Control de Versiones**: Git y GitHub.
+
+## 📍 Uso de la Geolocation API
+
+Este proyecto también utiliza la [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) para obtener la ubicación precisa del usuario directamente desde su dispositivo. Esto permite mejorar la precisión de los datos meteorológicos proporcionados y ofrecer una experiencia más personalizada. 🌎📡
