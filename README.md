@@ -9,8 +9,7 @@ Este proyecto utiliza la API de [ipinfo.io](https://ipinfo.io/) para obtener la 
 - ☀️ Visualización del clima actual basado en la ubicación del usuario.
 - 🔄 Actualización automática de datos meteorológicos en tiempo real.
 - 🌡️ Muestra de temperatura, humedad, y condiciones climáticas.
-- 📅 Pronóstico del clima para los próximos días.
-- 🌙 Modo oscuro y claro para una mejor experiencia de usuario.
+- 📅 Pronóstico del clima para los próximos 5 días.
 
 ## 🛠️ Tecnologías Utilizadas
 

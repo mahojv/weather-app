@@ -13,30 +13,17 @@ export default function App() {
   const { loading, error, response } = useData(url)
 
 
-  const {load, failure, request} = useIpFinder("https://ipinfo.io/json?token=004de71ef069cb") 
- 
+  const { load, failure, request } = useIpFinder("https://ipinfo.io/json?token=004de71ef069cb")
 
-
-
-  useEffect(()=>{
-
-    
+  useEffect(() => {
     setTimeout(() => {
-    
-      if(!load && request?.postal){
-  
+      if (!load && request?.postal) {
         setSearch(`q=${request.postal}`)
       }
- 
- 
-   }, 1000);
-    
 
+    }, 1000);
 
-}, [load, request])
-   
-
-
+  }, [load, request])
 
   return (
     <div className='flex flex-col md:flex-row'>
@@ -57,9 +44,6 @@ export default function App() {
         search={search}
 
       />
-
-
-
 
     </div>
   )

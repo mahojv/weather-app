@@ -17,19 +17,13 @@ export default function HeroSection({ response, loading, units, setSearch, searc
   function geoFindAPI() {
 
     geoFindMe((location) => {
-     
       const finder = `lat=${location[0]}&lon=${location[1]}`
-
       setSearch(finder)
     })
 
   }
-
   return (
     <div className='bg-[#1e213a] h-screen flex flex-col justify-around items-center w-full  md:w-[50%]'>
-
-
-
 
       {response !== null &&
         <>
@@ -54,7 +48,6 @@ export default function HeroSection({ response, loading, units, setSearch, searc
           <span className='  flex w-full  text-l justify-center gap-2 my-[20px] items-center'>
             <figure className=''><img src="location_on.svg" alt="" /></figure>
             <p className='' > {response.name}, {response.sys.country} </p>
-
           </span>
 
           <ModalSearch
@@ -65,8 +58,6 @@ export default function HeroSection({ response, loading, units, setSearch, searc
         </>
 
       }
-
-
     </div>
   )
 }

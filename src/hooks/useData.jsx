@@ -5,39 +5,27 @@ export default function useData(url) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [response, setResponse] = useState(null);
-
     async function getData() {
         try {
             setLoading(true)
-            const {data} = await axios.get(url)
-            
-                setResponse(data)
-                
-
-           
-            
-       
-            
-            
+            const { data } = await axios.get(url)
+            setResponse(data)
         } catch (error) {
             console.log(error)
             setError(error.message)
-        }finally{
+        } finally {
             setLoading(false)
         }
-        
-    }
 
-    useEffect(()=>{
-            getData()
-            
-        
-        
+    }
+    useEffect(() => {
+        getData()
+
     }, [url])
 
-  return {
-    loading,
-    error,
-    response
-  }
+    return {
+        loading,
+        error,
+        response
+    }
 }

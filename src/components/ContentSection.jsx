@@ -2,31 +2,23 @@ import React from 'react'
 import CardContainer from './CardContainer'
 import { windDirection } from '../js/windDirection'
 
-export default function ContentSection({ rsCurrent, load, units, setUnits,search }) {
-
-
+export default function ContentSection({ rsCurrent, load, units, setUnits, search }) {
   const windDir = windDirection(rsCurrent?.wind.deg)
-
-
   return (
     <>
-
-
-          <div className='bg-[#100e1d]  flex flex-col items-center justify-around  w-full md:px-[50px]  px-3 md:h-screen md:overflow-y-auto '>
-      {rsCurrent !== null &&
-        <>
+      <div className='bg-[#100e1d]  flex flex-col items-center justify-around  w-full md:px-[50px]  px-3 md:h-screen md:overflow-y-auto '>
+        {rsCurrent !== null &&
+          <>
             <div className=' w-full flex gap-5 items-center justify-end px-15 h-[64px] mt-[30px] '>
-              <button onClick={()=> setUnits("metric")} className={`w-[40px] h-[40px] ${units==="metric"? "bg-btnSelected text-btnText-selected" : "bg-btnUnselected text-btnText-unselected" }  font-bold rounded-full cursor-pointer `}  ><p>°C</p></button>
-              <button onClick={()=> setUnits("imperial")} className={`w-[40px] h-[40px] ${units==="imperial"? "bg-btnSelected text-btnText-selected":"bg-btnUnselected text-btnText-unselected" }  font-bold rounded-full cursor-pointer `}><p>°F</p></button>
+              <button onClick={() => setUnits("metric")} className={`w-[40px] h-[40px] ${units === "metric" ? "bg-btnSelected text-btnText-selected" : "bg-btnUnselected text-btnText-unselected"}  font-bold rounded-full cursor-pointer `}  ><p>°C</p></button>
+              <button onClick={() => setUnits("imperial")} className={`w-[40px] h-[40px] ${units === "imperial" ? "bg-btnSelected text-btnText-selected" : "bg-btnUnselected text-btnText-unselected"}  font-bold rounded-full cursor-pointer `}><p>°F</p></button>
 
             </div>
-            
+
             <CardContainer
-            search={search}
-            units={units}
+              search={search}
+              units={units}
             />
-
-
 
             <div className='flex flex-col  mt-7 md:mt-15 w-full items-center  gap-5  '>
               <div className='flex justify-start  w-full'>
@@ -67,7 +59,7 @@ export default function ContentSection({ rsCurrent, load, units, setUnits,search
                       <p>100</p>
                     </div>
                     <div className="w-[75%] bg-gray-200 rounded-full h-2.5 dark:bg-gray-200">
-                      <div className="bg-[#ffec65] h-2.5 rounded-full"  style={{ width: `${rsCurrent.main.humidity}%` }} ></div>
+                      <div className="bg-[#ffec65] h-2.5 rounded-full" style={{ width: `${rsCurrent.main.humidity}%` }} ></div>
                     </div>
                     <div className={`flex  w-[75%] justify-end `}>
                       <p>%</p>
@@ -82,7 +74,7 @@ export default function ContentSection({ rsCurrent, load, units, setUnits,search
                 <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[150px] flex flex-col items-center justify-between   py-3' >
                   <p>Visibility</p>
                   <span className='  flex gap-2 items-center justify-center '>
-                    <p className=' text-[60px] font-bold text-white ' >{(rsCurrent.visibility)/1000}</p>
+                    <p className=' text-[60px] font-bold text-white ' >{(rsCurrent.visibility) / 1000}</p>
                     <p className=' text-[36px] '>km</p>
                   </span>
 
@@ -101,14 +93,14 @@ export default function ContentSection({ rsCurrent, load, units, setUnits,search
 
 
             </div>
-        </>
-      }
+          </>
+        }
 
-            <footer className='bg-[#100e1d] w-full flex text-lg py-5 justify-center items-center'>
-              <h4 className='text-center' >Created by <strong> Mojav.Dev </strong> - devChallenges.io</h4>
-            </footer>
+        <footer className='bg-[#100e1d] w-full flex text-lg py-5 justify-center items-center'>
+          <h4 className='text-center' >Created by <strong> Mojav.Dev </strong> - devChallenges.io</h4>
+        </footer>
 
-          </div>
+      </div>
 
     </>
   )
