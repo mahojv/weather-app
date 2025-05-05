@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import ModalSearch from './ModalSearch'
 import { geoFindMe } from '../js/geoPosition'
 
-export default function HeroSection({ response, loading, units, setSearch, search }) {
-  const [toggle, setToggle] = useState(false)
+export default function HeroSection({ response, loading, units, setSearch, search, toggle, setToggle }) {
+  
 
   const weatherImg = response !== null ? response.weather[0].icon : '10d'
 

@@ -5,7 +5,7 @@ import useData from './hooks/useData'
 import useIpFinder from './hooks/useIpFinder'
 
 export default function App() {
-
+  const [toggle, setToggle] = useState(false)
   const [units, setUnits] = useState("metric")
   const [search, setSearch] = useState("q=london")
   const url2 = '/currentWeather.json'
@@ -26,8 +26,7 @@ export default function App() {
   }, [load, request])
 
   return (
-    <div className='flex flex-col md:flex-row'>
-
+    <div className={`flex flex-col md:flex-row h-screen ${toggle ? 'overflow-hidden' : 'overflow-auto'} `} >
 
       <HeroSection
         response={response}
@@ -35,6 +34,8 @@ export default function App() {
         units={units}
         setSearch={setSearch}
         search={search}
+        toggle={toggle}
+         setToggle={setToggle}
       />
       <ContentSection
         rsCurrent={response}
@@ -42,6 +43,7 @@ export default function App() {
         units={units}
         setUnits={setUnits}
         search={search}
+        toggle={toggle}
 
       />
 
