@@ -4,10 +4,10 @@ import { windDirection } from '../js/windDirection'
 
 export default function ContentSection({ rsCurrent, load, units, setUnits, search, toggle }) {
   const windDir = windDirection(rsCurrent?.wind.deg)
-  // ${toggle ? 'block' : 'hidden'}
+
   return (
     <>
-      <div className={`bg-[#100e1d]  flex flex-col items-center justify-around  w-full md:px-[50px]  px-3 md:h-screen md:overflow-y-auto  `}>
+      <div className={`bg-[#100e1d]  flex flex-col items-center justify-around  w-full md:px-[50px]  px-3 md:h-screen md:overflow-y-auto   `}>
         {rsCurrent !== null &&
           <>
             <div className=' w-full flex gap-5 items-center justify-end px-15 h-[64px] mt-[30px] '>
@@ -36,7 +36,7 @@ export default function ContentSection({ rsCurrent, load, units, setUnits, searc
                     <p className=' text-[36px] '>ms</p>
                   </span>
                   <span className=' flex  justify-center items-center gap-2.5 ' >
-                    <div className="bg-btnUnselected rounded-full w-[30px] h-[30px] flex items-center justify-center " style={{ transform: `rotate(${rsCurrent.wind.deg}deg)` }} >
+                    <div className="bg-btnUnselected rounded-full w-[30px] h-[30px] flex items-center justify-center" style={{ transform: `rotate(${rsCurrent.wind.deg}deg)` }} >
 
                       <figure className='w-[20px]  ' ><img src="navigation.svg" alt="" /></figure>
                     </div>

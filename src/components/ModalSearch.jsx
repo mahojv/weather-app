@@ -39,7 +39,7 @@ export default function ModalSearch({ toggle, setToggle, setSearch }) {
   })
 
   return (
-    <div className={`fixed  ${toggle ? 'block' : 'hidden'} bg-[#1e213a] w-full md:w-[32.7%] h-screen`}>
+    <div className={`fixed  ${toggle ? 'block' : 'hidden'} z-10 bg-[#1e213a] w-full md:w-[32.7%] h-screen`}>
 
       <div className='flex justify-end w-full pt-3 pr-10'>
 

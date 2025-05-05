@@ -26,7 +26,7 @@ export default function App() {
   }, [load, request])
 
   return (
-    <div className={`flex flex-col md:flex-row h-screen ${toggle ? 'overflow-hidden' : 'overflow-auto'} `} >
+    <div className={`flex flex-col md:flex-row  `} >
 
       <HeroSection
         response={response}
