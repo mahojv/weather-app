@@ -4,6 +4,8 @@ import { windDirection } from '../js/windDirection'
 
 export default function ContentSection({ rsCurrent, load, units, setUnits, search, toggle }) {
   const windDir = windDirection(rsCurrent?.wind.deg)
+  
+  let miles = ((rsCurrent?.visibility / 1.6094) /1000).toFixed(2)
 
   return (
     <>
@@ -29,11 +31,11 @@ export default function ContentSection({ rsCurrent, load, units, setUnits, searc
 
               <div className='flex flex-col  lg:grid lg:grid-cols-2 lg:justify-items-center  mt-7 md:mt-5 w-full items-center text-[16px] lg:text-[24px]   gap-5' >
 
-                <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[200px] flex flex-col  items-center justify-between    py-3' >
+                <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[200px] flex flex-col  items-center justify-around    py-3' >
                   <p>Wind status</p>
                   <span className='  flex gap-2 items-center justify-center '>
                     <p className=' text-[60px] font-bold text-white ' >{rsCurrent.wind.speed}</p>
-                    <p className=' text-[36px] '>ms</p>
+                    <p className=' text-[36px] '>{units==="metric"?  "ms": "mph"}</p>
                   </span>
                   <span className=' flex  justify-center items-center gap-2.5 ' >
                     <div className="bg-btnUnselected rounded-full w-[30px] h-[30px] flex items-center justify-center" style={{ transform: `rotate(${rsCurrent.wind.deg}deg)` }} >
@@ -44,10 +46,10 @@ export default function ContentSection({ rsCurrent, load, units, setUnits, searc
                   </span>
                 </div>
 
-                <div className=' bg-[#1e213a] w-[330px] md:w-[300px]  lg:w-[300px] xl:w-[360px] xl:h-[210px]  h-[200px] flex flex-col items-center justify-between   py-3' >
+                <div className=' bg-[#1e213a] w-[330px] md:w-[300px]  lg:w-[300px] xl:w-[360px] xl:h-[210px]  h-[200px] flex flex-col items-center justify-around   py-3' >
                   <p>Humidity</p>
                   <span className='  flex gap-2 items-center justify-center '>
-                    <p className=' text-[60px] font-bold text-white ' >{rsCurrent.main.humidity} </p>
+                    <p className=' text-[60px] font-bold text-white ' >  {rsCurrent.main.humidity} </p>
                     <p className=' text-[36px] '>%</p>
                   </span>
 
@@ -72,16 +74,16 @@ export default function ContentSection({ rsCurrent, load, units, setUnits, searc
 
                 </div>
 
-                <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[150px] flex flex-col items-center justify-between   py-3' >
+                <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[150px] flex flex-col items-center justify-around   py-3' >
                   <p>Visibility</p>
                   <span className='  flex gap-2 items-center justify-center '>
-                    <p className=' text-[60px] font-bold text-white ' >{(rsCurrent.visibility) / 1000}</p>
-                    <p className=' text-[36px] '>km</p>
+                    <p className=' text-[60px] font-bold text-white ' >{ units==="metric"?     ((rsCurrent.visibility) / 1000)  :  miles  }  </p>
+                    <p className=' text-[36px] '> {units==="metric"?  "km": "miles"}   </p>
                   </span>
 
                 </div>
 
-                <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[150px] flex flex-col items-center justify-between   py-3' >
+                <div className=' bg-[#1e213a] w-[330px] md:w-[300px] lg:w-[300px] xl:w-[360px] xl:h-[210px] h-[150px] flex flex-col items-center justify-around   py-3' >
                   <p>Air Pressure</p>
                   <span className='  flex gap-2 items-center justify-center '>
                     <p className=' text-[60px] font-bold text-white ' >{rsCurrent.main.pressure}</p>
