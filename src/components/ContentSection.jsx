@@ -97,7 +97,8 @@ export default function ContentSection({ rsCurrent, load, units, setUnits, searc
           </>
         }
 
-        <footer className='bg-[#100e1d] w-full flex text-lg py-5 justify-center items-center'>
+        <footer className='bg-[#100e1d] w-full flex text-lg py-5 justify-center items-center'> 
+        <figure className='w-[80px]'><img src="../mojav.png" alt="" /></figure>
           <h4 className='text-center' >Created by <strong> Mojav.Dev </strong> - devChallenges.io</h4>
         </footer>
 
